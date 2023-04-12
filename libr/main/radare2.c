@@ -1705,7 +1705,7 @@ R_API int r_main_radare2(int argc, const char **argv) {
 			debug = r_config_get_b (r->config, "cfg.debug");
 			if (ret != -1 && r_cons_is_interactive ()) {
 				char *question;
-				bool no_question_debug = ret & 1;
+				bool no_question_debug = 1;
 				bool no_question_save = (ret & 2) >> 1;
 				bool y_kill_debug = (ret & 4) >> 2;
 				bool y_save_project = (ret & 8) >> 3;
